@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLecturerTable extends Migration
+class CreatePrerreqTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateLecturerTable extends Migration
      */
     public function up()
     {
-        Schema::create('lecturer', function (Blueprint $table) {
-            $table->string('id', 8);
-            $table->string('full_name', 8);
-            $table->string('id_dep', 4);
+        Schema::create('prerreq', function (Blueprint $table) {
+            $table->increments('id');
             $table->timestamps();
-            $table->primary('id');
         });
     }
 
@@ -29,6 +26,6 @@ class CreateLecturerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lecturer');
+        Schema::dropIfExists('prerreq');
     }
 }

@@ -17,7 +17,7 @@ class CreateTableStudent extends Migration
             $table->string('carnet', 8);
             $table->string('full_name', 100);
             $table->boolean('status');
-            $table->string('id_plan');
+            $table->string('id_plan', 6);
             $table->string('password');
             $table->primary('carnet');
         });
