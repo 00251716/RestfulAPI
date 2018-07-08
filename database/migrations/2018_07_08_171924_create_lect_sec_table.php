@@ -14,8 +14,10 @@ class CreateLectSecTable extends Migration
     public function up()
     {
         Schema::create('lect_sec', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->string('id_lect', 8);
+            $table->string('id_sub', 8);
+            $table->string('id_sec', 8);
+            $table->primary('id_lect', 'id_sub', 'id_sec');
         });
     }
 

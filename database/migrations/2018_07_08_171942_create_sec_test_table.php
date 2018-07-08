@@ -14,8 +14,10 @@ class CreateSecTestTable extends Migration
     public function up()
     {
         Schema::create('sec_test', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->string('id_sub', 8);
+            $table->string('id_sec', 8);
+            $table->string('id_exam', 8);
+            $table->primary('id_sub', 'id_sec', 'id_exam');
         });
     }
 

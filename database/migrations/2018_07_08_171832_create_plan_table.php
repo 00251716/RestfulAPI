@@ -14,8 +14,10 @@ class CreatePlanTable extends Migration
     public function up()
     {
         Schema::create('plan', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->string('id_plan', 8);
+            $table->string('id_major', 8);
+            $table->string('year', 4);
+            $table->primary('id_plan', 'id_major');
         });
     }
 

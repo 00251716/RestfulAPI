@@ -14,8 +14,11 @@ class CreateStudSecTable extends Migration
     public function up()
     {
         Schema::create('stud_sec', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->string('id_stud', 8);
+            $table->string('id_sub', 8);
+            $table->string('id_sec', 8);
+            $table->string('status', 10);
+            $table->primary('id_stud', 'id_sub', 'id_sec');
         });
     }
 

@@ -14,8 +14,9 @@ class CreatePrerreqTable extends Migration
     public function up()
     {
         Schema::create('prerreq', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->string('prerreq_id', 8);
+            $table->string('sub_id', 8);
+            $table->primary('prerreq_id', 'sub_id');
         });
     }
 
