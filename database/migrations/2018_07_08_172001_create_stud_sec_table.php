@@ -18,7 +18,7 @@ class CreateStudSecTable extends Migration
             $table->string('id_sub', 8);
             $table->string('id_sec', 8);
             $table->string('status', 10);
-            $table->primary('id_stud', 'id_sub', 'id_sec');
+            $table->primary(['id_stud', 'id_sub', 'id_sec']);
         });
     }
 

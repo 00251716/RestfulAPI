@@ -17,7 +17,7 @@ class CreateLectSecTable extends Migration
             $table->string('id_lect', 8);
             $table->string('id_sub', 8);
             $table->string('id_sec', 8);
-            $table->primary('id_lect', 'id_sub', 'id_sec');
+            $table->primary(['id_lect', 'id_sub', 'id_sec']);
         });
     }
 

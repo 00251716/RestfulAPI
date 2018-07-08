@@ -19,7 +19,7 @@ class CreateSectionTable extends Migration
             $table->string('semester', 2);
             $table->string('room', 5);
             $table->string('schedule', 15);
-            $table->primary('sub_id', 'sec_id');
+            $table->primary(['sub_id', 'sec_id']);
         });
     }
 

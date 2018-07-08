@@ -19,6 +19,7 @@ class CreateEventTable extends Migration
             $table->date('date');
             $table->string('description', 100);
             $table->boolean('type');
+            $table->primary('id');
         });
     }
 

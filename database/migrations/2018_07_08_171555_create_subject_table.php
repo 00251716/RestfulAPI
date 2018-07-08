@@ -17,7 +17,6 @@ class CreateSubjectTable extends Migration
             $table->string('id', 8);
             $table->string('name', 20);
             $table->integer('uvs');
-            $table->timestamps();
             $table->primary('id');
         });
     }

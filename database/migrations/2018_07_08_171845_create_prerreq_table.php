@@ -16,7 +16,7 @@ class CreatePrerreqTable extends Migration
         Schema::create('prerreq', function (Blueprint $table) {
             $table->string('prerreq_id', 8);
             $table->string('sub_id', 8);
-            $table->primary('prerreq_id', 'sub_id');
+            $table->primary(['prerreq_id', 'sub_id']);
         });
     }
 

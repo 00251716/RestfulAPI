@@ -17,7 +17,7 @@ class CreatePlanTable extends Migration
             $table->string('id_plan', 8);
             $table->string('id_major', 8);
             $table->string('year', 4);
-            $table->primary('id_plan', 'id_major');
+            $table->primary(['id_plan', 'id_major']);
         });
     }
 

@@ -16,6 +16,7 @@ class CreateFacultyTable extends Migration
         Schema::create('faculty', function (Blueprint $table) {
             $table->string('id', 4);
             $table->string('name', 20);
+            $table->primary('id');
         });
     }
 
