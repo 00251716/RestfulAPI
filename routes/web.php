@@ -19,6 +19,8 @@ $router->get('/key', function () {
     return str_random('32');
 });
 
+$router->post('/login', 'StudentController@authenticate');
+
 $router->get('/users', 'StudentController@index');
 
-$router->post('/login', 'StudentController@authenticate');
+$router->get('/events', 'EventController@index');
