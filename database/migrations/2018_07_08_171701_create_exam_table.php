@@ -14,10 +14,11 @@ class CreateExamTable extends Migration
     public function up()
     {
         Schema::create('exam', function (Blueprint $table) {
-            $table->string('id', '4');
+            $table->increments('id');
+            $table->string('description', 255);
             $table->float('percentage');
             $table->date('date');
-            $table->primary('id');
+            $table->string('section_id', 14);
         });
     }
 
